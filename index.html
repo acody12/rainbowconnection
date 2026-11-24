@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Rainbow Connection — Chicago</title>
+<meta name="description" content="A proposed Saturday-night bus connecting Chicago’s queer nightlife across the North and West Sides.">
+<meta name="theme-color" content="#17498f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Rainbow Connection — Connecting Chicago Queer Communities">
+<meta property="og:description" content="A proposed late-night bus connecting Chicago’s queer nightlife across the North and West Sides.">
+<meta property="og:locale" content="en_US">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317498f'/%3E%3Cpath d='M12 43a20 20 0 0 1 40 0' fill='none' stroke='%23f54d74' stroke-width='6'/%3E%3Cpath d='M18 43a14 14 0 0 1 28 0' fill='none' stroke='%23ffe34d' stroke-width='6'/%3E%3Cpath d='M24 43a8 8 0 0 1 16 0' fill='none' stroke='%236bc878' stroke-width='6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://unpkg.com">
+<link rel="preconnect" href="https://tile.openstreetmap.org">
+<style>
+:root{--blue:#2863b5;--blue2:#17498f;--aqua:#5ed3d0;--yellow:#ffe34d;--pink:#f32883;--orange:#ff843f;--green:#6bc878;--purple:#a77be8;--ink:#13254a;--white:#fff;--pale:#edf3fb}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);font-family:Arial,Helvetica,sans-serif;background:#fff;line-height:1.45}
+a{color:inherit}.wrap{width:min(1120px,calc(100% - 44px));margin:auto}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid var(--pink);outline-offset:4px}
+button{font:inherit;cursor:pointer}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+header{background:var(--blue2);color:#fff;position:relative;z-index:5}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:19px;font-weight:1000;letter-spacing:-.8px;text-decoration:none;text-transform:uppercase}.brand-rainbow{background:linear-gradient(90deg,#f54d74,#ff9a40,#ffe34d,#6bc878,#5ed3d0,#b28bea);-webkit-background-clip:text;background-clip:text;color:transparent}.navlinks{display:flex;gap:25px}.navlinks a{font-size:12px;font-weight:900;text-decoration:none;text-transform:uppercase;letter-spacing:.7px}.navlinks a:hover{color:var(--yellow)}.navbutton{background:var(--yellow);color:var(--ink);border-radius:30px;padding:11px 18px;text-decoration:none;font-size:12px;font-weight:1000;text-transform:uppercase}.menu{display:none;background:transparent;color:white;border:2px solid #ffffff80;border-radius:30px;padding:8px 13px;font-weight:900}
+.hero{position:relative;overflow:hidden;background:linear-gradient(118deg,#2358a7 0%,#347bc5 55%,#42b8c4 100%);color:white;padding:76px 0 70px;min-height:510px}.hero:before{content:"";position:absolute;inset:32px -70px 30px 37%;border:36px solid #ffffff28;border-radius:150px;transform:rotate(-8deg);pointer-events:none}.hero:after{content:"";position:absolute;width:320px;height:320px;border:32px solid transparent;border-top-color:var(--yellow);border-right-color:var(--pink);border-bottom-color:var(--aqua);border-left-color:var(--orange);border-radius:50%;right:-150px;bottom:-200px;opacity:.9}.hero-content{position:relative;z-index:1;max-width:790px}.eyebrow{font-size:12px;font-weight:1000;text-transform:uppercase;letter-spacing:2px;color:var(--yellow)}h1{font-size:clamp(54px,9vw,105px);line-height:.86;letter-spacing:-5px;margin:18px 0 22px;text-transform:uppercase;font-weight:1000}.rainbow-word{background:linear-gradient(90deg,#ff6378 0 17%,#ffad43 17% 34%,#ffe34d 34% 50%,#6bd17a 50% 67%,#5ed3d0 67% 83%,#c39af3 83%);-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:none}.hero h2{font-size:clamp(21px,3vw,31px);line-height:1.15;margin:0 0 15px;font-weight:900}.hero p{font-size:17px;line-height:1.55;max-width:650px;color:#f0f6ff;margin:0 0 26px}.pill{display:inline-block;background:var(--yellow);color:var(--ink);font-weight:1000;text-transform:uppercase;letter-spacing:.6px;text-decoration:none;padding:13px 22px;border-radius:30px;font-size:13px}.pill.alt{background:transparent;border:2px solid #fff;color:white;margin-left:8px}
+section{padding:70px 0}.section-title{text-align:center;margin:0 auto 34px}.section-title h2{font-size:clamp(32px,5vw,53px);line-height:.95;letter-spacing:-1.8px;text-transform:uppercase;margin:0 0 10px;color:var(--blue2);font-weight:1000}.section-title p{font-size:14px;letter-spacing:1.1px;text-transform:uppercase;font-weight:900;color:#61738e;margin:0}
+.hours-route{background:#f1f5fb}.hours-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 auto 35px;max-width:850px}.hours-card{background:var(--blue2);color:#fff;text-align:center;padding:22px 12px;border-radius:4px}.hours-card h3{font-size:15px;letter-spacing:1.5px;margin:0 0 5px;text-transform:uppercase;color:var(--aqua)}.hours-card strong{font-size:clamp(20px,3vw,29px);display:block;line-height:1.1}.hours-card small{display:block;color:#d8e5f8;font-size:10px;text-transform:uppercase;letter-spacing:1px;margin-top:8px}
+.map-area{display:grid;grid-template-columns:1fr;gap:22px;align-items:stretch}.map-panel{background:#fff;border:1px solid #d8e2f0;padding:22px;border-radius:4px;position:relative}.map-panel h3{margin:0 0 7px;font-size:25px;text-transform:uppercase;letter-spacing:-.5px;color:var(--blue2)}.map-panel>p{max-width:760px;color:#586b84;font-size:14px;margin:0 0 18px}.map-canvas{height:510px;width:100%;border-radius:3px;border:1px solid #d8e2f0;background:#eaf0f5;z-index:1}.map-controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:15px}.map-controls a,.map-controls button{display:inline-block;background:var(--yellow);color:var(--ink);font-size:11px;font-weight:1000;text-transform:uppercase;text-decoration:none;padding:11px 15px;border:0;border-radius:25px}.map-controls button.secondary{background:#eaf0f8}.map-note{font-size:12px;color:#61738e;margin:12px 0 0}.map-legend{display:flex;flex-wrap:wrap;gap:12px 18px;margin:12px 0 0;font-size:12px;color:#526680}.legend-item{display:flex;align-items:center;gap:7px}.legend-dot{width:10px;height:10px;border-radius:50%;background:var(--c);display:inline-block;border:1px solid #fff;box-shadow:0 0 0 1px #9aabc0}
+.direction-lists{display:grid;grid-template-columns:1fr 1fr;gap:22px}.direction{background:#fff;border:2px solid #d8e2f0;padding:22px 24px}.direction h3{margin:0 0 15px;color:var(--pink);font-size:17px;letter-spacing:1.5px;text-transform:uppercase}.direction ol{margin:0;padding-left:22px}.direction li{padding:5px 0 7px 3px;border-bottom:1px solid #e9eef5;font-size:14px;font-weight:900}.direction li:last-child{border:0}.direction li span{display:block;color:#6c7d94;font-size:12px;font-weight:500}
+.why{background:#fff}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.why-card{text-align:center;padding:20px 18px}.why-symbol{height:56px;width:56px;border-radius:50%;margin:0 auto 15px;display:grid;place-items:center;background:var(--c);font-size:26px;color:var(--ink);font-weight:1000}.why-card h3{font-size:19px;text-transform:uppercase;color:var(--blue2);margin:0 0 8px}.why-card p{font-size:14px;color:#586b84;margin:0}
+.signup{background:var(--yellow);text-align:center;padding:55px 0}.signup h2{font-size:clamp(36px,6vw,60px);line-height:.95;text-transform:uppercase;color:var(--blue2);margin:0 0 10px;letter-spacing:-2px}.signup p{max-width:650px;margin:0 auto 22px;color:#33496c;font-size:15px}.signup a,.signup button{display:inline-block;background:var(--pink);color:#fff;text-decoration:none;border:0;border-radius:30px;padding:13px 24px;font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:.7px}
+.contact-form{max-width:760px;margin:28px auto 0;text-align:left;background:#fff;padding:25px;border-radius:5px;box-shadow:0 8px 25px #13254a12}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.6px;color:var(--blue2)}.field input,.field textarea{width:100%;padding:12px 13px;border:1px solid #cbd7e7;border-radius:3px;font:inherit;color:var(--ink);background:#fff}.field textarea{min-height:115px;resize:vertical}.form-actions{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:17px}.form-status{font-size:13px;color:#526680;min-height:20px}.copy-output{display:none;margin-top:14px}.copy-output.show{display:block}.copy-output textarea{width:100%;min-height:150px;padding:12px;border:1px solid #cbd7e7;border-radius:3px;font:13px/1.5 monospace}
+.faq-section{background:#f1f5fb}.faq-section .section-title{margin-bottom:26px}.faqs{max-width:880px;margin:auto}.faq{border-bottom:1px solid #cbd7e7;padding:17px 4px}.faq summary{list-style:none;cursor:pointer;font-size:16px;font-weight:900;color:var(--blue2);display:flex;justify-content:space-between;gap:15px}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";font-size:23px;color:var(--pink);line-height:1}.faq[open] summary:after{content:"−"}.faq p{font-size:14px;color:#526680;max-width:780px;margin:12px 25px 0 0}
+footer{background:var(--blue2);color:white;padding:35px 0}.footer-inner{display:flex;justify-content:space-between;gap:25px;align-items:start;flex-wrap:wrap}.footer-brand{font-size:18px;font-weight:1000;text-transform:uppercase}.footer-note{font-size:11px;color:#c7d7ec;max-width:650px}.footer-links{display:flex;gap:16px;font-size:12px;font-weight:900}.footer-links a{text-decoration:none}
+@media(max-width:760px){.nav{height:66px}.navlinks{display:none;position:absolute;top:66px;left:0;right:0;background:var(--blue2);padding:20px 24px;flex-direction:column}.navlinks.open{display:flex}.navbutton{display:none}.menu{display:block}.hero{padding:58px 0 55px;min-height:0}.hero:before{left:18%;inset-block:45px}h1{letter-spacing:-3px}.pill.alt{margin:10px 0 0}.hours-row{grid-template-columns:1fr;max-width:420px}.direction-lists{grid-template-columns:1fr}.map-canvas{height:420px}.map-panel{padding:17px}.why-grid{grid-template-columns:1fr;gap:5px}.why-card{padding:17px 10px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.contact-form{padding:18px}section{padding:55px 0}.section-title{margin-bottom:27px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+.route-number{background:transparent;border:0;box-shadow:none;color:#13254a;font-weight:1000;font-size:10px}.route-number:before{display:none}.leaflet-popup-content{font:13px/1.45 Arial,Helvetica,sans-serif}.leaflet-popup-content span{color:#61738e;font-size:11px}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="brand" href="#top"><span class="brand-rainbow">THE RAINBOW</span> CONNECTION</a>
+<nav class="navlinks" id="navlinks" aria-label="Primary navigation"><a href="#route">Route & Hours</a><a href="#why">Why Ride</a><a href="#faqs">FAQs</a><a href="#get-involved">Get Involved</a></nav>
+<a class="navbutton" href="#get-involved">Join the Connection!</a><button class="menu" id="menu" aria-label="Open navigation menu" aria-controls="navlinks" aria-expanded="false">MENU</button>
+</div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-content">
+<div class="eyebrow">Chicago’s late-night queer community bus</div>
+<h1>THE <span class="rainbow-word">RAINBOW</span><br>CONNECTION</h1>
+<h2>Connecting Chicago Queer Communities.</h2>
+<p>Chicago’s queer nightlife stretches across the North and West Sides. Getting between neighborhoods late at night can mean long waits or multiple transfers. The Rainbow Connection is a proposed Saturday-night bus line designed to make those trips simpler—and bring more of our community within reach.</p>
+<a class="pill" href="#route">Explore the route</a><a class="pill alt" href="#get-involved">Help make it happen</a>
+</div></section>
+
+<section class="hours-route" id="route"><div class="wrap">
+<div class="section-title"><h2>OUR PROPOSED ROUTE & HOURS</h2><p>Where we’re going and when we’re proposing to run</p></div>
+<div class="hours-row">
+<div class="hours-card"><h3>SATURDAYS</h3><strong>7PM – 3AM</strong><small>Proposed late-night service window</small></div>
+<div class="hours-card"><h3>PRIDE MONTH</h3><strong>12-WEEK PILOT</strong><small>Target launch period</small></div>
+<div class="hours-card"><h3>ONE CONNECTED ROUTE</h3><strong>9 STOPS</strong><small>West Town ↔ Edgewater · both ways</small></div>
+</div>
+<div class="map-area">
+<div class="map-panel">
+<h3>One bus line. More of our city.</h3>
+<p>Explore the proposed route geographically. Markers show the venue-area locations—not approved curbside boarding points.</p>
+<div id="route-map" class="map-canvas" role="application" aria-label="Interactive map of the proposed Rainbow Connection route in Chicago"></div>
+<div class="map-legend" aria-label="Map legend"><span class="legend-item"><i class="legend-dot" style="--c:#f54d74"></i>West Town</span><span class="legend-item"><i class="legend-dot" style="--c:#ffad43"></i>Logan Square & Avondale</span><span class="legend-item"><i class="legend-dot" style="--c:#ffe34d"></i>Lakeview & Northalsted</span><span class="legend-item"><i class="legend-dot" style="--c:#6bc878"></i>Uptown & Andersonville</span><span class="legend-item"><i class="legend-dot" style="--c:#5ed3d0"></i>Edgewater</span></div>
+<div class="map-controls"><button type="button" id="reset-map">Reset map view</button><a id="google-route" href="https://www.google.com/maps/dir/?api=1&amp;origin=2500+W+Chicago+Ave,+Chicago,+IL&amp;destination=6318+N+Clark+St,+Chicago,+IL&amp;waypoints=3017+W+Armitage+Ave,+Chicago,+IL%7C3734+W+Belmont+Ave,+Chicago,+IL%7C1622+W+Belmont+Ave,+Chicago,+IL%7C3340+N+Halsted+St,+Chicago,+IL%7C5024+N+Sheridan+Rd,+Chicago,+IL%7C5240+N+Clark+St,+Chicago,+IL%7C1744+W+Balmoral+Ave,+Chicago,+IL" target="_blank" rel="noopener noreferrer">Open directions in Google Maps ↗</a></div>
+<p class="map-note">Route line and markers are approximate planning references. The Northalsted marker represents a proposed shared stop serving Scarlet and Sidetrack. Final stop locations require site, accessibility and city review.</p>
+<noscript><p class="map-note">The interactive map requires JavaScript. Use the Google Maps directions link above or the stop lists below.</p></noscript>
+</div>
+<div class="direction-lists">
+<div class="direction"><h3>TOWARD EDGEWATER</h3><ol>
+<li>West Town <span>Dorothy · terminal</span></li><li>Logan Square <span>Babe’s</span></li><li>Avondale <span>Sleeping Village</span></li><li>Lakeview <span>Fathom</span></li><li>Northalsted <span>Scarlet / Sidetrack shared stop</span></li><li>Uptown <span>Big Chicks</span></li><li>Andersonville — South <span>Farraguts on Clark</span></li><li>Andersonville — North <span>Nobody’s Darling</span></li><li>Edgewater <span>Whiskey Girl Tavern · terminal</span></li>
+</ol></div>
+<div class="direction"><h3>TOWARD WEST TOWN</h3><ol>
+<li>Edgewater <span>Whiskey Girl Tavern · terminal</span></li><li>Andersonville — North <span>Nobody’s Darling</span></li><li>Andersonville — South <span>Farraguts on Clark</span></li><li>Uptown <span>Big Chicks</span></li><li>Northalsted <span>Scarlet / Sidetrack shared stop</span></li><li>Lakeview <span>Fathom</span></li><li>Avondale <span>Sleeping Village</span></li><li>Logan Square <span>Babe’s</span></li><li>West Town <span>Dorothy · terminal</span></li>
+</ol></div>
+</div>
+</div></section>
+
+<section class="why" id="why"><div class="wrap"><div class="section-title"><h2>THE RIDE IS ABOUT MORE THAN GETTING THERE</h2><p>Travel safely. Explore more. Support our community.</p></div>
+<div class="why-grid">
+<article class="why-card"><div class="why-symbol" style="--c:#f32883">♥</div><h3>Travel safely, together</h3><p>A shared late-night transportation option can make it easier to travel between venues and neighborhoods, without having to make every trip alone.</p></article>
+<article class="why-card"><div class="why-symbol" style="--c:#ffe34d">✦</div><h3>Explore more neighborhoods</h3><p>Make it easier to catch a show, meet friends, try a new bar and discover more of Chicago’s queer scene.</p></article>
+<article class="why-card"><div class="why-symbol" style="--c:#6bc878">♥</div><h3>Support our community</h3><p>Connect the bars, artists, organizers and neighborhood businesses that make Chicago’s queer nightlife special.</p></article>
+</div></div></section>
+
+<section class="signup" id="get-involved"><div class="wrap"><h2>TAKE THE RIDE!</h2><p>The Rainbow Connection is a proposal in development. We’re looking for venues, community organizations, neighborhood partners, funders and transportation operators who want to help bring this bus line to Chicago.</p>
+<form class="contact-form" id="contact-form">
+<div class="form-grid">
+<div class="field"><label for="contact-name">Your name</label><input id="contact-name" name="name" autocomplete="name" required placeholder="Name"></div>
+<div class="field"><label for="contact-org">Organization or business</label><input id="contact-org" name="organization" autocomplete="organization" placeholder="Organization (optional)"></div>
+<div class="field full"><label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+<div class="field full"><label for="contact-message">How would you like to get involved?</label><textarea id="contact-message" name="message" required placeholder="Tell us a little about your interest..."></textarea></div>
+</div>
+<div class="form-actions"><button type="submit">Prepare my message</button><span class="form-status" id="form-status" role="status" aria-live="polite">This creates a message you can copy and send. It does not submit to a server.</span></div>
+<div class="copy-output" id="copy-output"><label class="sr-only" for="prepared-message">Prepared outreach message</label><textarea id="prepared-message" readonly></textarea><div class="form-actions"><button type="button" id="copy-message">Copy message</button><span class="form-status" id="copy-status" role="status" aria-live="polite"></span></div></div>
+</form>
+</div></section>
+
+<section class="faq-section" id="faqs"><div class="wrap"><div class="section-title"><h2>FAQs</h2><p>What to know about the proposal</p></div><div class="faqs">
+<details class="faq"><summary>When would The Rainbow Connection run?</summary><p>The proposed service window is Saturday nights, 7:00 p.m. to 3:00 a.m., with a target launch during Pride Month as a 12-week pilot. The final timetable and frequency still need to be confirmed.</p></details>
+<details class="faq"><summary>Where would the bus go?</summary><p>The proposed line runs between Dorothy in West Town and Whiskey Girl Tavern in Edgewater, with stops in Logan Square, Avondale, Lakeview, Northalsted, Uptown and two parts of Andersonville.</p></details>
+<details class="faq"><summary>Can I ride between any two stops?</summary><p>Yes. The idea is a two-way bus line, not a bar crawl. Riders would be able to board and get off at designated stops in either direction without having to visit every venue.</p></details>
+<details class="faq"><summary>How often would the bus arrive?</summary><p>The final frequency has not been set. The one-bus pilot schedule needs to account for travel time, stop dwell time and turnaround time at both terminals. A confirmed timetable will be shared before service begins.</p></details>
+<details class="faq"><summary>How much would it cost?</summary><p>The preferred goal is a fully subsidized, free-to-ride service. Funding and the final fare policy have not yet been secured.</p></details>
+<details class="faq"><summary>Will I be able to track the bus?</summary><p>A live tracker is something to explore with the eventual transportation operator. There is no live tracking service at this proposal stage.</p></details>
+<details class="faq"><summary>Are these official bus stops?</summary><p>Not yet. The route and venue locations are proposed. Final curb locations, accessibility, traffic impacts and city permissions must be reviewed before the pilot can operate.</p></details>
+<details class="faq"><summary>How can my organization or business get involved?</summary><p>We’re interested in hearing from venues, LGBTQ+ organizations, neighborhood groups, funders and transportation providers. Use the message builder above to prepare an introduction you can send to the project team or a potential partner.</p></details>
+</div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><div><div class="footer-brand"><span class="brand-rainbow">THE RAINBOW</span> CONNECTION</div><div style="font-size:11px;margin-top:5px">CONNECTING CHICAGO QUEER COMMUNITIES</div></div><div class="footer-note">The Rainbow Connection is a proposed service, not an operating bus line. Route, stop locations, hours, fares and launch timing are preliminary and subject to funding, city approvals, operator procurement and route testing.</div><div class="footer-links"><a href="#route">Route</a><a href="#faqs">FAQs</a><a href="#get-involved">Contact</a></div></div></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(() => {
+  // Make every same-page navigation link scroll explicitly. This is more
+  // reliable than depending on native hash jumps in mobile/file previews.
+  document.addEventListener('click', event => {
+    const link = event.target.closest('a[href^="#"]');
+    if (!link) return;
+    const hash = link.getAttribute('href');
+    if (!hash || hash === '#') return;
+    const target = document.getElementById(decodeURIComponent(hash.slice(1)));
+    if (!target) return; // leave ordinary browser behavior for unknown targets
+    event.preventDefault();
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    if (!target.hasAttribute('tabindex')) target.setAttribute('tabindex', '-1');
+    target.focus({ preventScroll: true });
+    try { history.pushState(null, '', hash); } catch (_) { /* file previews may restrict URL updates */ }
+  }, true);
+
+  const menu = document.getElementById('menu');
+  const nav = document.getElementById('navlinks');
+  const setMenu = (open) => {
+    nav.classList.toggle('open', open);
+    menu.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+  };
+  menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+  nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+  document.addEventListener('click', event => {
+    if (nav.classList.contains('open') && !nav.contains(event.target) && !menu.contains(event.target)) setMenu(false);
+  });
+
+  const stops = [
+    {n:1, area:'West Town', venue:'Dorothy · Terminal', address:'2500 W Chicago Ave, Chicago, IL 60622', lat:41.8959, lng:-87.6875},
+    {n:2, area:'Logan Square', venue:'Babe’s', address:'3017 W Armitage Ave, Chicago, IL 60647', lat:41.9173, lng:-87.7035},
+    {n:3, area:'Avondale', venue:'Sleeping Village', address:'3734 W Belmont Ave, Chicago, IL 60618', lat:41.9393, lng:-87.7210},
+    {n:4, area:'Lakeview', venue:'Fathom', address:'1622 W Belmont Ave, Chicago, IL 60657', lat:41.9393, lng:-87.6690},
+    {n:5, area:'Northalsted', venue:'Scarlet / Sidetrack shared stop', address:'Proposed near 3340 N Halsted St, Chicago, IL 60657', lat:41.9430, lng:-87.6493},
+    {n:6, area:'Uptown', venue:'Big Chicks', address:'5024 N Sheridan Rd, Chicago, IL 60640', lat:41.9730, lng:-87.6540},
+    {n:7, area:'Andersonville — South', venue:'Farraguts on Clark', address:'5240 N Clark St, Chicago, IL 60640', lat:41.9760, lng:-87.6680},
+    {n:8, area:'Andersonville — North', venue:'Nobody’s Darling', address:'1744 W Balmoral Ave, Chicago, IL 60640', lat:41.9802, lng:-87.6730},
+    {n:9, area:'Edgewater', venue:'Whiskey Girl Tavern · Terminal', address:'6318 N Clark St, Chicago, IL 60660', lat:41.9970, lng:-87.6707}
+  ];
+  const mapNode = document.getElementById('route-map');
+  if (mapNode && window.L) {
+    const map = L.map(mapNode, {scrollWheelZoom:false}).setView([41.953, -87.676], 12);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom:19, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    const colors = ['#f54d74','#ffad43','#ffad43','#ffe34d','#ffe34d','#6bc878','#6bc878','#6bc878','#5ed3d0'];
+    const latlngs = [];
+    stops.forEach((stop, index) => {
+      const point = [stop.lat, stop.lng]; latlngs.push(point);
+      const marker = L.circleMarker(point, {radius:9, color:'#ffffff', weight:2, fillColor:colors[index], fillOpacity:1}).addTo(map);
+      marker.bindPopup(`<strong>${stop.n}. ${stop.area}</strong><br>${stop.venue}<br><span>${stop.address}</span>`);
+      marker.bindTooltip(String(stop.n), {permanent:true, direction:'center', className:'route-number'});
+    });
+    const route = L.polyline(latlngs, {color:'#2863b5',weight:4,opacity:.9,dashArray:'8 8'}).addTo(map);
+    map.fitBounds(route.getBounds(), {padding:[28,28]});
+    document.getElementById('reset-map').addEventListener('click', () => map.fitBounds(route.getBounds(), {padding:[28,28]}));
+    window.addEventListener('load', () => map.invalidateSize());
+  } else if (mapNode) {
+    mapNode.innerHTML = '<div style="padding:24px;color:#13254a">The interactive map could not load. Please use the Google Maps directions link or the stop lists below.</div>';
+  }
+
+  const form = document.getElementById('contact-form');
+  const output = document.getElementById('copy-output');
+  const prepared = document.getElementById('prepared-message');
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    const message = [
+      'Hello,', '',
+      'I’m interested in The Rainbow Connection, a proposed Saturday-night bus connecting Chicago’s queer communities across the North and West Sides.', '',
+      `Name: ${data.get('name')}`,
+      `Organization: ${data.get('organization') || 'Not provided'}`,
+      `Email: ${data.get('email')}`, '',
+      'How I’d like to get involved:', String(data.get('message')), '',
+      'Thank you.'
+    ].join('\n');
+    prepared.value = message;
+    output.classList.add('show');
+    document.getElementById('form-status').textContent = 'Your message is ready below. Copy it and send it to your intended project contact.';
+    prepared.focus();
+    prepared.select();
+  });
+  document.getElementById('copy-message').addEventListener('click', async () => {
+    const status = document.getElementById('copy-status');
+    try {
+      await navigator.clipboard.writeText(prepared.value);
+      status.textContent = 'Copied. Paste it into your email or message.';
+    } catch (error) {
+      prepared.focus(); prepared.select();
+      status.textContent = 'Automatic copying is unavailable here. The message is selected—copy it using your device’s Copy command.';
+    }
+  });
+})();
+</script>
+</body></html>
